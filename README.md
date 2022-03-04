@@ -1,6 +1,7 @@
 # Codecademy Learn Intermediate Python
 
 *March 4 2022*
+
 Welcome. I'm currently learning Python. After finishing off the 
 Learn Python 3 course over at Codecademy, I jump over to the Intermediate
 Python course. Unsure if I'm really ready, but I'll give it a go :)
