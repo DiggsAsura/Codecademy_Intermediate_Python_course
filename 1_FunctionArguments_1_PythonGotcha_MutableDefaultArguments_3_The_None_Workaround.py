@@ -56,3 +56,19 @@ order2 = update_order({'item': 'soda', 'cost': '1.50'})
 print(order2)
 
 # Boom, got it. Lol. 
+
+
+
+# Wrap up:
+
+# To summarize, we learned:
+#   - What a Python gotcha is
+#   - What mutable objects are in Python 
+#   - A common gotcha that occurs when using mutable default arguments.
+#   - A workaround for mutable default arguments by using None paired with 
+#     a conditional statement.
+#
+# Keep this gotcha in mind whenever deciding to use a mutable object as a
+# default argument. While most developers recommend staying away from this
+# approach, there are notable use cases for this syntax that may be worth
+# looking into. 
