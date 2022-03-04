@@ -1,4 +1,4 @@
-# Codecademy Learn Intermediate Python
+# Codecademy Learn Intermediate Python 3
 
 *March 4 2022*
 
