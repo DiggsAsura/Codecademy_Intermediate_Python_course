@@ -25,9 +25,6 @@
 # "pre-computed" value is used for each call."
 #
 
-from venv import create
-
-
 def createStudent(name, age, grades=[]):
   return {
     'name': name,
