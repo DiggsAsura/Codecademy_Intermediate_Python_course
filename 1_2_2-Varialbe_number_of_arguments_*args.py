@@ -56,7 +56,8 @@
 #    arguments using a parameter called order_items. The function should
 #    simply print order_items
 #
-# 2. Looks like
+# 2. Looks like... ups forgot to write the rest. Does it matter? I basically only 
+#    write it all down to try memorise better. 
 
 def print_order(*order_items):
   print(order_items)
