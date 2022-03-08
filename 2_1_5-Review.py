@@ -39,3 +39,15 @@ print("""
       Local / Enclosing Namespace
       
       """)
+
+print("\n BUILT-INS\n")
+print(dir(__builtins__))
+
+print("\n GLOBALS\n")
+print(globals())
+
+print("\n Locals / Enclosing \n")
+def local_stuff():
+  some_stuff = "ok"
+  print(locals())
+local_stuff()
