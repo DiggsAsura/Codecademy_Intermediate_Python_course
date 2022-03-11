@@ -35,6 +35,9 @@
 #   - Includes everything in School class, plus one additional property
 #   - Properties: sportsTeams (list of strings, like ['basketball', 'tennis'])
 
+from tkinter import N
+
+
 class School():
   def __init__(self, name, level, numberOfStudents):
     self.name = name
@@ -58,8 +61,16 @@ class School():
     return "A {level} school named {name} with {n} students".format(level=self.level, name=self.name, n=self.numberOfStudents)
     
 
-class Primary():
-  pass
+class Primary(School):
+  def __init__(self, name, numberOfStudents, pickupPolicy):
+    super().__init__(name, 'primary', numberOfStudents)
+    self.pickupPolicy = pickupPolicy
+  
+  def get_pickupPolicy(self):
+    return self.pickupPolicy
+  
+  def __repr__(self):
+    return super().__repr__() + ". {} is the pickup policy".format(self.pickupPolicy)
 
 class Middle():
   pass
@@ -68,8 +79,10 @@ class High():
   pass
 
 
-s1 = School("Raumyr", "Primary", 400)
-print(s1)
+#s1 = School("Raumyr", "Primary", 400)
+s2 = Primary("Raumyr", 500, "4pm")
+#print(s1)
+print(s2)
 #print(s1.get_name())
 #print(s1.get_level())
 #print(s1.get_numberOfStudents())
