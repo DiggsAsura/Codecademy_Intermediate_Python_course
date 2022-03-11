@@ -75,17 +75,27 @@ class Primary(School):
 class Middle():
   pass
 
-class High():
-  pass
+class High(School):
+  def __init__(self, name, numberofStudents, sportsTeams):
+    super().__init__(name, 'high', numberofStudents)
+    self.sportsTeams = sportsTeams
+  
+  def get_sportsTeams(self):
+    return self.sportsTeams
+  
+  def __repr__(self):
+    sch = super().__repr__()
+    return sch + "\nThe school have these sports teams: \n{}".format(self.sportsTeams)
 
 
 #s1 = School("Raumyr", "Primary", 400)
-s2 = Primary("Raumyr", 500, "4pm")
+#s2 = Primary("Raumyr", 500, "4pm")
 #print(s1)
-print(s2)
+#print(s2)
 #print(s1.get_name())
 #print(s1.get_level())
 #print(s1.get_numberOfStudents())
 
-
+s3 = High("Yolo", 1500, ['tennis', 'ice hocky', 'soccer', 'football'])
+print(s3)
 
