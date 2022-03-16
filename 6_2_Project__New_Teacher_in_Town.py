@@ -118,4 +118,6 @@ for i in s:
 # 
 # I'm skipping this for now, to not totally loose my shit. And maybe come back to it later.
 # https://discuss.codecademy.com/t/new-teacher-in-town-project-under-learn-intermediate-python-3/608434/27
-
+#
+# The project
+# https://www.codecademy.com/courses/learn-intermediate-python-3/projects/new-teacher-in-town-project
