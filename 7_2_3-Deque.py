@@ -1,6 +1,6 @@
 # 7. Specialized Collections
 # 2. Collections
-# 2. Deque
+# 3. Deque
 
 print('\nDeque\n---------')
 
