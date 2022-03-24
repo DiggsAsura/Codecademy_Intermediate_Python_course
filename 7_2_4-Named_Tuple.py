@@ -121,3 +121,18 @@ clothes = [('t-shirt', 'green', 'large', 9.99),
            ('t-shirt', 'grey', 'small', 8.99),
            ('shoes', 'grey', 'small', 8.99)]
 
+#from collections import namedtuple
+
+ClothingItem = namedtuple('ClothingItem', ['type', 'color', 'size', 'price'])
+
+new_coat = ClothingItem('coat', 'black', 'small', 14.99)
+coat_price = new_coat.price
+print(new_coat)
+print(coat_price)
+
+updated_clothes_data = []
+for item in clothes:
+  updated_clothes_data.append(ClothingItem(item[0], item[1], item[2], item[3]))
+
+for item in updated_clothes_data:
+  print(item)
