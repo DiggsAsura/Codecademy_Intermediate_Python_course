@@ -163,8 +163,20 @@ orders = OrderedDict(order_data)
 to_move = []
 to_remove = []
 
-for order, status in orders:
+for order, status in orders.items():
   if status == 'returned':
-    print(order, status)
+    to_move.append(order)
+  elif status == 'canceled':
+    to_remove.append(order)
 
-#print(to_move)    
+print(to_move)    
+print(to_remove)
+
+for order in to_remove:
+  orders.pop(order)
+
+for order in to_move:
+  orders.move_to_end(order)
+
+for order, status in orders.items():
+  print(f'{order} \n\tStatus: {status}')
