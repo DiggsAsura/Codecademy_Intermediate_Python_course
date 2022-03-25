@@ -159,5 +159,28 @@ def get_profits(profit_map):
 
 last_year_standard_profit, last_year_holiday_profit = get_profits(profit_map)
 
-print(last_year_holiday_profit)
-print(last_year_standard_profit)
+print(f'Last year holiday profit: {last_year_holiday_profit}')
+print(f'Last year standard profit: {last_year_standard_profit}')
+
+
+for item in new_months_data:
+  profit_map = profit_map.new_child(item)
+
+current_year_standard_profit, current_year_holiday_profit = get_profits(profit_map)
+print(f'Current year standard profit: {current_year_standard_profit}')
+print(f'Current year holiday profit: {current_year_holiday_profit}')
+
+year_diff_standard_profit = current_year_standard_profit - last_year_standard_profit
+year_diff_holiday_profit = current_year_holiday_profit - last_year_holiday_profit
+
+print(f'Year difference, standard profit: {year_diff_standard_profit}')
+print(f'Year difference, holiday profit: {year_diff_holiday_profit}')
+
+
+# Ok I gotta admit, these collections chapters are pretty hard in terms
+# of keeping motivation up. Rough mentally to get through, hard to keep
+# motivated. But I'll push on. It won't stick as good, but I do beleive
+# that I have pushed to far before actually applying alot of what I have 
+# learned prior. I do this mostly to have them in the back of my head, whenever
+# I reach that point when I need them later on.
+
