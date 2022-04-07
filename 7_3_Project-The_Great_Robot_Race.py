@@ -192,7 +192,7 @@ while len(robot_moves) > 0:
   # Make sure to pop moves from the front of the deque
   # Add your code below!
   for move in robot_moves:
-    robot_moves.popleft(move)
+    robot_moves.popleft()
 
 
   # Update the maze characters based on the robot positions and print it to the console
@@ -203,3 +203,7 @@ while len(robot_moves) > 0:
 # Print out the results!
 #rr.print_results(bot_scores)
 
+
+# This project got so dragged out, I will come back to it.
+# Motivation allmost cracked, several days between coming back to it. 
+# So yea, i just finish this for now and eventually get back to it. 
