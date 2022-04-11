@@ -135,3 +135,52 @@ print('\nTasks\n')
 #     context managers!
 #
 #     Take some time to check out the great cards you created!
+
+from contextlib import contextmanager
+
+@contextmanager
+def generic(card_type, sender_name, recipient):
+  card = open(card_type, 'r')
+  order = open(f'{sender_name}_generic.txt', 'w')
+  
+  try:
+    order.write(f'Dear {recipient}, \n')
+    order.write(f'{card.read()} \n')
+    order.write(f'Sincerely, {sender_name} \n')
+    yield order
+  
+  finally:
+    card.close()
+    order.close()
+
+#with generic("thankyou_card.txt", "Mwenda", "Amanda"):
+#  print("Card Generated \n")
+
+#with open("Mwenda_generic.txt", "r") as card:
+#  print(card.read())
+
+class personalized:
+  def __init__(self, sender, recipient):
+    self.sender = sender
+    self.recipient = recipient
+    self.file = open(f'{sender}_personalized.txt', 'w')
+  
+  def __enter__(self):
+    self.file.write(f'Dear {self.recipient}')
+    return self.file
+
+  def __exit__(self, exc_type, exc_value, traceback):
+    self.file.write(f'\n\nSincercely, \n {self.sender}')
+    self.file.close()
+
+
+with personalized("John", "Michael") as card:
+  card.write("I am so proud of you! Being your friend for all these years has been nothing but a blessing. I don’t say it often but I just wanted to let you know that you inspire me and I love you! All the best. Always.")
+
+with generic("happy_bday.txt", "Josiah", "Remy") as card, personalized("Josiah", "Esther") as card2:
+  card2.write("Happy Birthday!! I love you to the moon and back. Even though you’re a pain sometimes, you’re a pain I can't live without. I am incredibly proud of you and grateful to have you as a sister. Cheers to 25!! You’re getting old!")
+  
+
+
+# Ok got this mostly, used the solution to check something here and there. 
+# Still got ways to do, but I think this wraps up the Intermediate Course!
